@@ -7,3 +7,7 @@ class person(models.Model):
     email = models.EmailField(max_length=200)
     subject = models.CharField(max_length=200)
     message = models.TextField()
+    
+class product(models.Model):
+    discrition = models.TextField()    
+    upload_img = models.ImageField(upload_to='product/')
