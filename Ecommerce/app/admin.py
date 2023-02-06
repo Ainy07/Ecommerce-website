@@ -5,3 +5,7 @@ from . models import *
 @admin.register((person))
 class personModelAdmin(admin.ModelAdmin):
     list_display = ['id','name','email','subject','message']
+
+@admin.register((product))    
+class productModelAdmin((admin.ModelAdmin)):
+    list_display = ['id','discrition','upload_img']   

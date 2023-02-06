@@ -1,11 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http.response import HttpResponse
 from . models import *
 from django.contrib import messages
 
 
+
 def home(request):
-    return render(request, "home.html")
+    item = product.objects.all()
+    return render(request, "home.html",
+                    {"item":item})
 
 
 def about(request):
